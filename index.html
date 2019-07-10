@@ -4,24 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--Normalize CSS here-->
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+    <!--Plugin CSS here-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css">
+    <!--Main CSS here-->
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <title>Photo Gallery</title>
 </head>
 <body>
-    <input type="search" placeholder="Search">
-    <div class="gallery">
-        <div class="gallery__box"><img src="photos/01.jpg"></div>
-        <div class="gallery__box"><img src="photos/02.jpg"></div>
-        <div class="gallery__box"><img src="photos/03.jpg"></div>
-        <div class="gallery__box"><img src="photos/04.jpg"></div>
-        <div class="gallery__box"><img src="photos/05.jpg"></div>
-        <div class="gallery__box"><img src="photos/06.jpg"></div>
-        <div class="gallery__box"><img src="photos/07.jpg"></div>
-        <div class="gallery__box"><img src="photos/08.jpg"></div>
-        <div class="gallery__box"><img src="photos/09.jpg"></div>
-        <div class="gallery__box"><img src="photos/10.jpg"></div>
-        <div class="gallery__box"><img src="photos/11.jpg"></div>
-        <div class="gallery__box"><img src="photos/12.jpg"></div>
+
+    <input type="text" placeholder="Search" name="filtr-search" value="" data-search="">
+
+    <div class="gallery relative-caption" id="lightgallery">
+        <a class="gallery__box" data-category="1" data-sub-html=".caption" href="photos/01.jpg" data-sort="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+            <img src="photos/01.jpg" alt="Hay Bales">
+            <div class="caption">
+                <h4>Hay Bales</h4>
+                <p>I love hay bales. Took this snap on a drive through the countryside past some straw fields.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/02.jpg" alt="The lake was so calm today. We had a great view of the snow on the mountains from here.">
+            <img src="photos/02.jpg" alt="Lake">
+            <div class="caption">
+                <h4>Lake</h4>
+                <p>The lake was so calm today. We had a great view of the snow on the mountains from here.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/03.jpg" alt="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+            <img src="photos/03.jpg" alt="Canyon">
+            <div class="caption">
+                <h4>Canyon</h4>
+                <p>I hiked to the top of the mountain and got this picture of the canyon and trees below.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/04.jpg" alt="It was amazing to see an iceberg up close, it was so cold but didn’t snow today."><img src="photos/04.jpg">
+            <div class="caption" alt="Iceberg">
+                <h4>Iceberg</h4>
+                <p>It was amazing to see an iceberg up close, it was so cold but didn’t snow today.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/05.jpg" alt="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
+            <img src="photos/05.jpg" alt="Desert">
+            <div class="caption">
+                <h4>Desert</h4>
+                <p>The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/06.jpg" alt="Fall is coming, I love when the leaves on the trees start to change color.">
+            <img src="photos/06.jpg" alt="Fall">
+            <div class="caption">
+                <h4>Fall</h4>
+                <p>Fall is coming, I love when the leaves on the trees start to change color.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/07.jpg" alt="I drove past this plantation yesterday, everything is so green!">
+            <img src="photos/07.jpg" alt="Plantation">
+            <div class="caption">
+                <h4>Plantation</h4>
+                <p>I drove past this plantation yesterday, everything is so green!</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/08.jpg" alt="My summer vacation to the Oregon Coast. I love the sandy dunes!">
+            <img src="photos/08.jpg" alt="Dunes">
+            <div class="caption">
+                <h4>Dunes</h4>
+                <p>My summer vacation to the Oregon Coast. I love the sandy dunes!</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/09.jpg" alt="We enjoyed a quiet stroll down this countryside lane.">
+            <img src="photos/09.jpg" alt="Countryside Lane">
+            <div class="caption">
+                <h4>Countryside Lane</h4>
+                <p>We enjoyed a quiet stroll down this countryside lane.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/10.jpg" alt="Sunset at the coast! The sky turned a lovely shade of orange.">
+            <img src="photos/10.jpg" alt="Sunset">
+            <div class="caption">
+                <h4>Sunset</h4>
+                <p>Sunset at the coast! The sky turned a lovely shade of orange.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/11.jpg" alt="I did a tour of a cave today and the view of the landscape below was breathtaking.">
+            <img src="photos/11.jpg" alt="Cave">
+            <div class="caption">
+                <h4>Cave</h4>
+                <p>I did a tour of a cave today and the view of the landscape below was breathtaking.</p>
+            </div>
+        </a>
+        <a class="gallery__box" data-sub-html=".caption" href="photos/12.jpg"  lt="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+            <img src="photos/12.jpg" alt="Bluebells">
+            <div class="caption">
+                <h4>Bluebells</h4>
+                <p>I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</p>
+            </div>
+        </a>
     </div>
+
+    <!--JQuery Import here-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--Plugin JS here-->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
+    <!--Main JS here-->
+    <script src="JS/main.js"></script>
+
 </body>
 </html>
