@@ -10,4 +10,11 @@ $('document').ready(function () {
     });
 });
 
-// Calling Filterizr Plugin
+// Calling LiveSearchPlugin
+
+$('document').ready(function () {
+    $('.filter-container').filterizr({
+        //Plugin Options here,
+        gutterPixels: 50,
+    });
+});

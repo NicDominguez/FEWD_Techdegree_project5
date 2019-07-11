@@ -14,7 +14,7 @@ input {
     display: block;
     border: 1px solid lightgrey;
     border-radius: 5px;
-    width: 48%;
+    width: 45%;
     height: 2em;
     margin: 2.5% auto;
     text-indent: 10px;
@@ -34,10 +34,9 @@ input::placeholder {
 }
 
 .gallery__box {
-    flex-basis: 20%;
-    margin: 2.5%;
-    height: 200px;
+    height: 175px;
     cursor: pointer;
+    width: 25%;
 }
 
 img {
