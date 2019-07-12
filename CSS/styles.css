@@ -27,16 +27,24 @@ input::placeholder {
 
 .gallery {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    /* remove property below */
+    flex-flow: column wrap;
+    justify-content: flex-start;
     background-color: white;
 }
 
 .gallery__box {
+    flex-basis: 100%;
     height: 175px;
     cursor: pointer;
-    width: 25%;
+    box-shadow: 0px 36px 60px -2px rgba(97,96,97,0.71);
+    /* change if using Filterizr (no flex-basis, no margin, add width = 20%)*/
+    margin: 2.5%;
+    transition: all 600ms ease-out;
+}
+
+.gallery__box:hover {
+    box-shadow: 0px 25px 40px -2px rgba(189, 189, 189, 0.71);
+    transform: scale(1.05);
 }
 
 img {
@@ -56,4 +64,72 @@ img {
 
 .lg-toolbar, .lg-sub-html {
     background-color: rgba(0,0,0,0);
+}
+
+.lg-sub-html {
+    margin-bottom: 80%;
+}
+
+/* Media Queries */
+
+@media (min-width: 350px) {
+    .gallery {
+        flex-flow: row wrap;
+    }
+    .gallery__box {
+        flex-basis: 45%;
+    }
+    .lg-sub-html {
+        margin-bottom: 35%;
+    }
+}
+
+@media (min-width: 600px) {
+    .gallery__box {
+        flex-basis: 28%;
+    }
+        .lg-sub-html {
+        margin-bottom: 20%;
+    }
+}
+
+@media (min-width: 800px) {
+    .gallery__box {
+        flex-basis: 20%;
+    }
+    .lg-outer {
+        padding: 10%;
+    }
+    .lg-sub-html {
+        margin-bottom: 10%;
+    }
+}
+
+@media (min-width: 1150px) {
+    .lg-outer {
+        padding: 2%;
+    }
+    .lg-sub-html {
+        margin-bottom: 2%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .lg-outer {
+        padding: 5%;
+        max-width: 1200px;
+    }
+    .lg-sub-html {
+        margin-bottom: 1%;
+        right: 10%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .lg-sub-html {
+        left: 80%;
+        bottom: 50%;
+        padding: 1%;
+        right: 3%;
+    }
 }
